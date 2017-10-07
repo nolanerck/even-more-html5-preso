@@ -8,17 +8,27 @@
 <body>
 
 <script>
-	const BAND_NAME = "Depeche Mode";
-	console.log( BAND_NAME );
-	
-	//BAND_NAME = "Yazoo"; // this won't work. can't redefine a constant
-	
-	var bandName2 = BAND_NAME;
-	bandName2 = "The Cure";
-	
-	console.log( BAND_NAME );
-	console.log( bandName2 );
+	function runConstDemo()
+	{
+		const BAND_NAME = "Depeche Mode";
+		console.log( BAND_NAME );
+		
+		//BAND_NAME = "Yazoo"; // this won't work. can't redefine a constant
+		
+		var bandName2 = BAND_NAME; 	// but I CAN make a copy of the "const" and stick it in a "var"
+		// bandName2 = "The Cure";	// and I can alter the copy in the "var"
+		console.log( bandName2 );	
+	}
+
+	function init()
+	{
+		document.getElementById( "btnConstDemo" ).addEventListener( "click", function(){ runConstDemo(); });
+	}
+
+	window.onload = init;
 </script>
+
+<button id="btnConstDemo">Run Const Demo</button>
 
 </body>
 </html>

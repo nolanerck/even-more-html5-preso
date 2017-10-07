@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	<p id="ziggyLyric">And Ziggy played guitar, jamming good with Weird and Gilley and the Spiders from Mars</p>
+	<p id="spaceOddity">Ground Control to Major Tom, commencing countdown, engines on.</p>
+
+	<script>
+		var p1 = document.getElementById( "ziggyLyric" );
+		var p2 = document.getElementById( "spaceOddity" );
+		var difference = p1.compareDocumentPosition( p2 );
+		
+		/*
+			1: The two nodes do not belong to the same document.
+			2: p1 is positioned after p2.
+			4: p1 is positioned before p2.
+			8: p1 is positioned inside p2.
+			16: p2 is positioned inside p1.
+			32: The two nodes has no relationship, or they are two attributes on the same element.		
+		*/
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<script>
+	function changeColors()
+	{
+/*		$( ".musician" ).each( function() { ... } */
+		
+		var aryMusicians = document.getElementsByClassName('musician'), i = aryMusicians.length;
+		
+		while(i--) 
+		{
+        	aryMusicians[ i ].style.backgroundColor = "aqua";		
+		}
+	}
+</script>
+
+</head>
+
+<body>
+
+	<div class="musician">John Lennon</div>
+	<div class="musician">Paul McCartney</div>
+	<div class="musician">George Harrison</div>
+	<div class="musician">Ringo Starr</div>
+	<div class="musician">Pete Best</div>
+
+	<button onClick="changeColors();">Click Me</button>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<!-- sample taken from developer.mozilla.com -->
+<script>
+	function varTest() 
+	{
+	  var bandName = "Kraftwerk";
+		
+	  if (true) 
+	  {
+		var bandName = "The Human League";  // same variable! enter JavaScript "variable "hoisting"
+		console.log( bandName );
+	  }
+		
+	  console.log( bandName );
+	}
+
+	function letTest() 
+	{
+	  let bandName = "Heaven 17";
+		
+	  if (true) 
+	  {
+		let bandName = "Erasure";  // different variable
+		console.log( bandName ); 
+	  }
+	  console.log( bandName ); 
+	}
+	
+//	varTest();
+	letTest();
+	
+</script>
+
+</body>
+</html>

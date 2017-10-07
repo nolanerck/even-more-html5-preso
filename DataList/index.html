@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	<form name="frmRegistration">
+
+		<div>
+			<label for="newURL">URL: </label>
+			<input type="url" name="myURL" list="bandURLs" />
+			
+			<datalist id="bandURLs">
+				<option label="Depeche Mode" value="http://www.depechemode.com" />
+				<option label="Green Day" value="http://www.greenday.com" />
+				<option label="David Bowie" value="http://www.davidbowie.com" />
+				<option label="Deftones" value="http://www.deftones.com" />
+				<option label="The Claypool Lennon Delirium" value="http://theclaypoollennondelirium.com/" />
+			</datalist>
+			
+			<!-- Support is uniformally "so-so" for every browser. -->
+			
+		</div>
+		
+		<div>
+			<input type="submit" name="btnSubmit" value="Submit" />
+		</div>
+
+	</form>
+
+</body>
+</html>

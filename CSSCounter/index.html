@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			counter-reset: section;
+		}
+
+		h1 {
+			counter-reset: subsection;
+		}
+
+		h1:before {
+			counter-increment: section;
+			content: "Section " counter(section) ". ";
+		}
+
+		h2:before {
+			counter-increment: subsection;
+			content: counter(section) "." counter(subsection) " ";
+		}
+	</style>
+</head>
+
+<body>
+	<h1>New Wave Bands</h1>
+	<h2>Depeche Mode</h2>
+	<h2>Yazoo</h2>
+
+	<h1>British Invasion Bands</h1>
+	<h2>The Beatles</h2>
+	<h2>The Who</h2>
+	<h2>The Rolling Stones</h2>
+
+	<h1>Local Sacramento Bands</h1>
+	<h2>7 Seconds</h2>
+	<h2>Deathray</h2>
+	<h2>Eugene Ugly</h2>
+</body>
+</html>

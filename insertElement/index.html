@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	<div id="singer">Dave Gahan</div>
+	<div id="guitarist">Martin Gore</div>
+
+	<script>
+		function elem(text) 
+		{
+		  var el = document.createElement('div');
+		  try {
+			el.textContent = text;
+		  } catch (err) {}
+		  try {
+			el.innerText = text;
+		  } catch (err) {}
+		  return el;
+		}
+		
+		
+		window.onload = function () 
+		{
+			var a = document.getElementById( "singer" );
+			a.insertAdjacentElement( 'beforebegin', elem( 'Alan Wilder' ) );
+			a.insertAdjacentElement( 'afterbegin', elem( 'Andy Fletcher' ) );
+			a.insertAdjacentElement( 'beforeend', elem( 'Vince Clark' ) );
+			a.insertAdjacentElement( 'afterend', elem( 'Christian Eigner' ) );
+		}
+		
+		/* can also do insertAdjacentText() the same way. */
+		
+		/* can also do insertAdjacentHTML() 
+			d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+			
+			Node.insertBefore()
+			Node.appendChild() (same effect as beforeend)
+		*/
+		
+		
+	</script>
+	
+
+</body>
+</html>

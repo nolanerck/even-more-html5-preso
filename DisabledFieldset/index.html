@@ -1,17 +1,13 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+	<meta charset="UTF-8">
+	<title>Disabled Fieldset</title>
 </head>
-
 <body>
-
 	<form name="frmUser" id="frmUser">
-	
 		<fieldset>
 			<legend>User Details</legend>
-			
 			<div>
 				<label for="username">User Name:</label>
 				<input type="text" name="username" id="username" />
@@ -25,20 +21,15 @@
 		
 		<fieldset disabled="disabled">
 			<legend>Optional Info</legend>
-			
 			<div>
 				<label for="favoriteColor">Favorite Color:</label>
 				<input type="color" name="favoriteColor" id="favoriteColor" /> <!--  type=color doesn't work in IE yet. -->
 			</div>
-			
 			<div>
 				<label for="annualIncome">Annual Incom:</label>
 				<input type="range" min="30000" max="99999" name="annualIncome" id="annualIncome" />
 			</div>			
-		</fieldset>		
-	
+		</fieldset>
 	</form>
-
-
 </body>
 </html>

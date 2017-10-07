@@ -12,19 +12,8 @@
 		function elem(text) 
 		{
 			var el = document.createElement('div');
-		  
-		  	try 
-		  	{
-				el.textContent = text;
-		  	} 
-		  	catch (err) {}
-		  
-		  	try 
-		  	{
-				el.innerText = text;
-		 	} 
-		 	catch (err) {}
-		  
+		  	el.textContent = text;
+		  	el.innerText = text;
 		  	return el;
 		}
 		

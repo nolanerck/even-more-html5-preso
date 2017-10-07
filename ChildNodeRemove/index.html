@@ -1,14 +1,12 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+	<meta charset="UTF-8">
+	<title>Child Node Remove</title>
 </head>
-
 <body>
 
-	<!-- Primus! -->
-	<div id="primus">
+	<div id="bandMembers">
 		<div id="bassPlayer">Les Claypool</div>
 		<div id="drummer">Tim Alexander</div>
 		<div id="guitarist">Larry Lalonde</div>
@@ -17,10 +15,11 @@
 	<script>
 		window.onload = function () 
 		{
-			var el = document.getElementById('drummer');
+			var el = document.getElementById( 'drummer' );
 			el.nextElementSibling.remove(); // nextElementSibling - Removes the DIV for Larry
 		}
-	</script>
 
+		/* can also do "previousElementSibling" or just "childre" to get all the child elements */
+	</script>
 </body>
 </html>

@@ -1,33 +1,35 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+	<meta charset="UTF-8">
+	<title>getElementsByClassName</title>
 
-<script>
-	function changeColors()
-	{		
-/*		$( ".musician" ).each( function() { ... }   <!---- the jQuery way... */
-		
-		var aryMusicians = document.getElementsByClassName('musician');
-		var i = aryMusicians.length;
-		
-		while(i--) 
-		{
-        	aryMusicians[ i ].style.backgroundColor = "aqua";		
+	<script>
+		function changeColors()
+		{		
+	/*		$( ".musician" ).each( function() { ... }   <!---- the jQuery way... */
+			
+			var aryMusicians = document.getElementsByClassName('musician');
+			var i = aryMusicians.length;
+			
+			while(i--) 
+			{
+	        	aryMusicians[ i ].style.backgroundColor = "green";		
+			}
 		}
-	}
-</script>
+	</script>
 
 </head>
 
 <body>
 
-	<div class="musician">John Lennon</div>
-	<div class="musician">Paul McCartney</div>
-	<div class="musician">George Harrison</div>
-	<div class="musician">Ringo Starr</div>
-	<div class="musician">Pete Best</div>
+	<div style="width: 50%">
+		<div class="musician">John Lennon</div>
+		<div class="musician">Paul McCartney</div>
+		<div class="musician">George Harrison</div>
+		<div class="musician">Ringo Starr</div>
+		<div class="musician">Pete Best</div>
+	</div>
 
 	<button onClick="changeColors();">Click Me</button>
 

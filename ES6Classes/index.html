@@ -1,0 +1,27 @@
+<script>
+	class Musician
+	{
+		constructor( name, instrument ) 
+		{
+			this.name = name;
+			this.instrument = instrument;
+		}
+
+		displayInfo()
+		{
+			document.write( "Name: " + this.name + "<br />" );
+			document.write( "Instrument: " + this.instrument + "<br />" );
+		}
+	};
+
+	var m1 = new Musician( "Mick Ronson", "guitar" );
+	var m2 = new Musician( "Tony Visconti", "bass" );
+	var m3 = new Musician( "Woody Woodmansey", "drums" );
+	var m4 = new Musician( "David Bowie", "vocals" );
+
+	m1.displayInfo();
+	m2.displayInfo();
+	m3.displayInfo();
+	m4.displayInfo();
+
+</script>

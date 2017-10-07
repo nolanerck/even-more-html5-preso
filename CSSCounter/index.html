@@ -3,21 +3,26 @@
 <head>
 	<style>
 		body {
-			counter-reset: section;
+			counter-reset: section; /* at the top of the document, start counting at "1" */
 		}
 
 		h1 {
 			counter-reset: subsection;
+			font-size: 14px;
 		}
 
 		h1:before {
 			counter-increment: section;
-			content: "Section " counter(section) ". ";
+			content: "Genre " counter(section) ". ";
 		}
 
 		h2:before {
 			counter-increment: subsection;
 			content: counter(section) "." counter(subsection) " ";
+		}
+
+		h2 {
+			font-size: 11px;
 		}
 	</style>
 </head>

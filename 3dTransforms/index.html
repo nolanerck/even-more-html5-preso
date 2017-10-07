@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3d Transforms</title>
+	<!-- demo based on http://css3.bradshawenterprises.com/flip/ -->
+	<style type="text/css">
+		#f1_container 
+		{
+			position: relative;
+			margin: 10px auto;
+			width: 450px;
+			height: 281px;
+			z-index: 1;
+		}
+
+		#f1_container 
+		{
+			perspective: 1000;
+		}
+
+		#f1_card 
+		{
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			transition: all 1.0s linear;
+		}
+
+		#f1_container:hover #f1_card 
+		{
+			transform: rotateY(180deg);
+			box-shadow: -5px 5px 5px #aaa;
+		}
+
+		.face 
+		{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+
+		.face.back-rotateY 
+		{
+			display: block;
+			transform: rotateY(180deg);
+			box-sizing: border-box;
+			padding: 10px;
+			color: white;
+			text-align: center;
+			background-color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div id="f1_container">
+		<div id="f1_card" class="shadow">
+			<div class="front face">
+				<img src="midnight-oil-headshot.jpg" alt="Midnight Oil" />
+			</div>
+			<div class="back-rotateY face center">
+				<p>Midnight Oil recently reunited and went on a sold out world tour.</p>
+				<p>You may remember their song "Beds Are Burning".</p>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+</body>
+</html>

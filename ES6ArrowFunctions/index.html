@@ -1,0 +1,24 @@
+<script>
+
+	displayBeatles = () => 
+	{
+		let aryBeatles = [ "John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr", "Pete Best" ];
+		
+		for( let x = 0; x < aryBeatles.length; x++ )
+		{
+			document.write( aryBeatles[ x ] + "<br />" );
+		}
+
+	};
+
+	displayBeatles();
+
+	displayPunkBand = ( bandIdx ) => {
+		let aryBands = [ "7 Seconds", "Green Day", "Descendents", "Operation Ivy", "The Clash" ];
+
+		return aryBands[ bandIdx ];
+	}
+
+	document.write( "<br />Punk band selected: " + displayPunkBand( 2 ) );
+
+</script>

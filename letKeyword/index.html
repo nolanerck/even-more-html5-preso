@@ -1,46 +1,46 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Let variables</title>
+	<meta charset="UTF-8">
+	<title>Let variables</title>
 </head>
-
 <body>
 
-<!-- sample taken from developer.mozilla.com -->
+<!-- sample based on code from developer.mozilla.com -->
 <script>
 	function varTest() 
 	{
-	  var bandName = "Kraftwerk";
+	 	var bandName = "Kraftwerk";
 		
-	  if (true) 
-	  {
-		var bandName = "The Human League";  // same variable! enter JavaScript "variable "hoisting"
-		console.log( bandName );
-	  }
-		
-	  console.log( bandName );
+		if( true ) 
+		{
+			var bandName = "The Human League";  // same variable! enter JavaScript "variable "hoisting"
+			console.log( "Band Name is: " + bandName );
+		}
+
+		console.log( "Band Name is: " + bandName );
 	}
 
 	function letTest() 
 	{
-	  let bandName = "Heaven 17";
+		let bandName = "Heaven 17";
+
+		if( true ) 
+		{
+			let bandName = "Erasure";  // different variable
+			console.log( "Band Name is: " + bandName );
+		}
 		
-	  if (true) 
-	  {
-		let bandName = "Erasure";  // different variable
-		console.log( bandName ); 
-	  }
-	  console.log( bandName ); 
+		console.log( "Band Name is: " + bandName );
 	}
-	
-	window.onload = initPage;
 
 	initPage = function()
 	{
 		document.getElementById( "btnVars" ).addEventListener("click", function(){ varTest(); });
 		document.getElementById( "btnLets" ).addEventListener("click", function(){ letTest(); });
 	}
+	
+	window.onload = initPage;
 </script>
 
 <button id="btnVars">Variables with var</button>

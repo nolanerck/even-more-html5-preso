@@ -6,10 +6,11 @@
 
 <script>
 	function changeColors()
-	{
-/*		$( ".musician" ).each( function() { ... } */
+	{		
+/*		$( ".musician" ).each( function() { ... }   <!---- the jQuery way... */
 		
-		var aryMusicians = document.getElementsByClassName('musician'), i = aryMusicians.length;
+		var aryMusicians = document.getElementsByClassName('musician');
+		var i = aryMusicians.length;
 		
 		while(i--) 
 		{

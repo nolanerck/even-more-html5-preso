@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Let variables</title>
 </head>
 
 <body>
@@ -34,10 +34,17 @@
 	  console.log( bandName ); 
 	}
 	
-//	varTest();
-	letTest();
-	
+	window.onload = initPage;
+
+	initPage = function()
+	{
+		document.getElementById( "btnVars" ).addEventListener("click", function(){ varTest(); });
+		document.getElementById( "btnLets" ).addEventListener("click", function(){ letTest(); });
+	}
 </script>
+
+<button id="btnVars">Variables with var</button>
+<button id="btnLets">Variables with let</button>
 
 </body>
 </html>
